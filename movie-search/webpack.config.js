@@ -35,7 +35,6 @@ module.exports = (env, options) => {
                 // reloadAll: true,
               },
             },
-
             {
               loader: 'css-loader',
               options: {
@@ -46,6 +45,7 @@ module.exports = (env, options) => {
                 },
               },
             },
+            'resolve-url-loader',
             {
               loader: 'sass-loader',
               options: {

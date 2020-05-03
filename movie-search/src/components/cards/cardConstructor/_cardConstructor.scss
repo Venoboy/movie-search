@@ -1,0 +1,38 @@
+.name-wrapper {
+  height: 42px;
+  padding: 5px 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  //background: #000 url("../../../assets/headbar.jpg") no-repeat center;
+  a {
+    color: white;
+    text-shadow: 1px 1px 3px #6c2fff;
+  }
+}
+
+.rating {
+  color: white;
+  position: relative;
+  font-size: 18px;
+  margin: 5px 0 10px;
+  text-shadow: 1px 1px 3px #6c2fff;
+}
+
+.year {
+  color: white;
+  font-size: 20px;
+  margin: 8px;
+  text-shadow: 1px 1px 3px #6c2fff;
+}
+
+.rating::before {
+  content: '';
+  position: absolute;
+  background-image: url('star.svg');
+  width: 24px;
+  height: 24px;
+  top: -4px;
+  left: -32px;
+}
