@@ -132,3 +132,9 @@ $material-icons-font-path: '~material-icons/iconfont/';
     padding: 0 6px;
   }
 }
+
+@media screen and (max-width: 840px) {
+  .keyboard-pic {
+    display: none;
+  }
+}

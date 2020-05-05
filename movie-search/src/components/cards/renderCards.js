@@ -15,8 +15,8 @@ const renderCards = (query, currentPage) => {
         swiperWrapper.innerHTML = '';
         swiperWrapper.append(...sliderContent);
         mySwiper.update();
+        mySwiper.slideTo(0);
       } else {
-        swiperContainer.style.display = 'none';
         messageField.innerText = `No results for ${query}`;
       }
     } catch (e) {
