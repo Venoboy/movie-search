@@ -4,63 +4,78 @@ $material-icons-font-path: '~material-icons/iconfont/';
 
 
 .searchBoxWrapper {
-    position: relative;
+  position: relative;
   height: 50px;
 }
 
 .searchBox {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 200;
-    transform:  translate(-50%,50%);
-    background: #2f3640;
-    height: 50px;
-    border-radius: 40px;
-    padding: 10px;
-    display: flex;
-    align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 200;
+  transform: translate(-50%, 50%);
+  background: #2f3640;
+  height: 50px;
+  border-radius: 40px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.keyboard-pic {
+  color: gray;
+  transition: .3s;
+  font-size: 0;
+}
+
+.keyboard-pic:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.keyboard-pic-hover {
+  font-size: 36px;
+  margin-right: 5px;
 }
 
 .cancelButton {
-    box-sizing: border-box;
-    position: relative;
-    //display: flex;
-    visibility: hidden;
-    color: white;
-    border-radius: 50%;
-    background: #2f3640;
-    padding: 0;
-    width: 0;
-    height: 24px;
-    font-size: 0;
-    border-width: 0;
+  box-sizing: border-box;
+  position: relative;
+  visibility: hidden;
+  color: white;
+  border-radius: 50%;
+  background: #2f3640;
+  padding: 0;
+  width: 0;
+  height: 24px;
+  font-size: 0;
+  border-width: 0;
 }
 
 .searchInput {
-    border:none;
-    background: none;
-    outline:none;
-    float:left;
-    padding: 0;
-    color: white;
-    font-size: 22px;
-    transition: 0.4s;
-    line-height: 50px;
-    width: 0;
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: white;
+  font-size: 22px;
+  transition: 0.4s;
+  line-height: 50px;
+  width: 0;
 }
 
 .searchHover {
-    width: 300px;
-    padding: 0 6px;
+  width: 300px;
+  padding: 0 6px;
 }
 
 .cancelHover {
-    width: 24px;
-    border-width: 2px;
-    margin-right: 10px;
-    font-size: 24px;
-    //padding: 0 6px;
+  width: 24px;
+  border-width: 2px;
+  margin-right: 5px;
+  font-size: 24px;
+  //padding: 0 6px;
 }
 
 //.searchBox:hover > .searchButton {
@@ -69,33 +84,33 @@ $material-icons-font-path: '~material-icons/iconfont/';
 //}
 
 .searchButton {
-    color: white;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: #2f3640;
-    justify-content: center;
-    align-items: center;
-    transition: 0.4s;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #2f3640;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
 }
 
 .cancelButton span {
-    margin: 0;
-    padding: 0;
-    position: relative;
-    top: -2px;
-    left: -2px;
-    font-size: 0;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: -2px;
+  left: -2px;
+  font-size: 0;
 }
 
 .cancelHover span {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 
 .cancelButton:focus,
 .searchButton:focus {
-    outline: none;
+  outline: none;
 }
 
 //.searchButton {
@@ -112,8 +127,8 @@ $material-icons-font-path: '~material-icons/iconfont/';
 //}
 
 @media screen and (max-width: 620px) {
-    .searchHover > .searchInput {
+  .searchHover > .searchInput {
     width: 150px;
     padding: 0 6px;
-}
+  }
 }

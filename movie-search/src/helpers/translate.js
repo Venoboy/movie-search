@@ -7,7 +7,6 @@ const translate = async (query) => {
   if (isCyrillic(query)) {
     const translationPromise = await fetch(`https://translate.yandex.net/api/v1.5/tr.json/translate?key=${yandexKey}&text=${query}&lang=ru-en`);
     const translation = await translationPromise.json();
-    console.log(translation.text[0]);
     [result] = translation.text;
     messageField.innerText = `Search results for: ${result}`;
   }

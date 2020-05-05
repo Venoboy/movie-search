@@ -16,7 +16,7 @@ async function getData(myQuery, currentPage = 1) {
   try {
     spinner.style.display = 'block';
     query = await translate(query);
-    const promise = await fetch(`http://www.omdbapi.com/?apikey=${data.apiKey}&s=${query}&page=${currentPage}`);
+    const promise = await fetch(`http://www.omdbapi.com/?apikey=${data.apiKey}&s=${query}&page=${currentPage}&type=movie`);
     const response = await promise.json();
     data.currentPage = currentPage;
     data.query = query;
