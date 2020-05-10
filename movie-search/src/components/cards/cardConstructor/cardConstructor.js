@@ -21,6 +21,7 @@ const cardConstructor = (params) => {
     poster.src = noPoster;
   } else {
     poster.src = params.Poster;
+    poster.classList.add('animateImg');
   }
   card.push(poster);
 

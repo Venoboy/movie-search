@@ -7,6 +7,9 @@
     "@babel/plugin-transform-runtime": "^7.9.0",
     "@babel/runtime": "^7.9.2",
     "autoprefixer": "latest",
+    "babel-jest": "^26.0.1",
+    "eslint-plugin-jest": "^23.10.0",
+    "identity-obj-proxy": "^3.0.0",
     "material-icons": "^0.3.1",
     "ssr-window": "^1.0.1",
     "swiper": "^5.3.8",
@@ -14,13 +17,14 @@
     "webpack-cli": "^3.3.11"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.0",
+    "@babel/core": "^7.9.6",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
-    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-env": "^7.9.6",
     "@typescript-eslint/eslint-plugin": "^2.30.0",
     "@typescript-eslint/parser": "^2.30.0",
     "babel-loader": "^8.1.0",
     "babel-plugin-add-module-exports": "^1.0.2",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.5.2",
     "eslint": "^6.8.0",
@@ -29,6 +33,7 @@
     "file-loader": "^6.0.0",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.2.0",
+    "jest": "^26.0.1",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.1",
     "resolve-url-loader": "^3.1.1",
@@ -38,7 +43,7 @@
   "scripts": {
     "dev": "webpack --mode development",
     "prod": "webpack --mode production",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "webpack-dev-server"
   },
   "repository": {
@@ -50,5 +55,13 @@
   "bugs": {
     "url": "https://github.com/Venoboy/english-for-kids/issues"
   },
-  "homepage": "https://github.com/Venoboy/english-for-kids#readme"
+  "homepage": "https://github.com/Venoboy/english-for-kids#readme",
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "./__mocks__/fileMock.js"
+    },
+    "transform": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/fileTransformer.js"
+    }
+  }
 }

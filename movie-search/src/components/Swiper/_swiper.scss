@@ -13,6 +13,7 @@ body {
 
 .swiper-wrapper {
   flex-grow: 0;
+  transition: opacity 1s !important;
 }
 .swiper-container {
 
@@ -41,6 +42,8 @@ body {
 
   box-shadow: 0 0 7px 5px black;
 
+  transition: opacity 1s !important;
+
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -57,7 +60,7 @@ body {
 }
 
 .swiper-pagination-bullet {
-  background: #fff;
+  background: #fff !important;
   opacity: 0.4;
 }
 .swiper-pagination-bullet-active {

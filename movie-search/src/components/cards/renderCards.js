@@ -4,18 +4,18 @@ import mySwiper from '../Swiper/Swiper';
 
 const renderCards = (query, currentPage) => {
   const swiperWrapper = document.querySelector('.swiper-wrapper');
-  const swiperContainer = document.querySelector('.swiper-container');
   const messageField = document.querySelector('.messageField');
   let sliderContent = [];
   getData(query, currentPage).then(() => {
     try {
       if (data.films) {
-        swiperContainer.style.display = 'block';
         sliderContent = data.films.map((elem) => cardConstructor(elem));
         swiperWrapper.innerHTML = '';
         swiperWrapper.append(...sliderContent);
+        if (currentPage === 1 || !currentPage) {
+          mySwiper.slideTo(0);
+        }
         mySwiper.update();
-        mySwiper.slideTo(0);
       } else {
         messageField.innerText = `No results for ${query}`;
       }

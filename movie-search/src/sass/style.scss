@@ -73,3 +73,12 @@ footer {
   padding: 7px;
   text-align: center;
 }
+
+@keyframes opacityAnimation {
+  from { opacity: 0 } to { opacity: 1 }
+}
+
+.animateImg {
+  animation: 1s linear 0s 1 alternate opacityAnimation;
+}
+
