@@ -13,6 +13,7 @@ async function getData(myQuery, currentPage = 1) {
   let query = myQuery;
   const messageField = document.querySelector('.messageField');
   const spinner = document.querySelector('.lds-spinner');
+  const resultsPerPage = 10;
   try {
     spinner.style.display = 'block';
     query = await translate(query);
@@ -27,7 +28,7 @@ async function getData(myQuery, currentPage = 1) {
       data.films.push(...response.Search);
     }
     data.totalResults = response.totalResults;
-    data.pages = Math.ceil(response.totalResults / 10);
+    data.pages = Math.ceil(response.totalResults / resultsPerPage);
 
     if (data.films) {
       const addInfoPromises = data.films.map((elem) => (
