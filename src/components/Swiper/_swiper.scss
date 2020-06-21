@@ -1,0 +1,69 @@
+html, body {
+  position: relative;
+  height: 100%;
+}
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color:#000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper-wrapper {
+  flex-grow: 0;
+  transition: opacity 1s !important;
+}
+.swiper-container {
+
+  @media (max-width: 1279px) {
+    width: 940px !important;
+  }
+  @media (max-width: 959px) {
+    width: 620px !important;
+  }
+  @media (max-width: 639px) {
+    width: 300px !important;
+  }
+  width: 1260px;
+
+  //height: 50%;
+  margin: 150px auto 0;
+  padding: 10px !important;
+}
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 18px;
+  background: #000;
+  border-radius: 20px;
+
+  box-shadow: 0 0 7px 5px black;
+
+  transition: opacity 1s !important;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-pagination-bullet {
+  background: #fff !important;
+  opacity: 0.4;
+}
+.swiper-pagination-bullet-active {
+  background: #007aff;
+    opacity: 1;
+}
